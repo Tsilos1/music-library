@@ -1,9 +1,8 @@
 import GalleryItem from '../GalleryItem'
 
-const Gallery = (props) => {
-    const data = props.data.result.read()
+function Gallery(props){
 
-    const display = data.map((item, index) => {
+    const display = props.data.map((item, index) => {
         return (
             <GalleryItem item={item} key={index} />
         )
@@ -11,10 +10,9 @@ const Gallery = (props) => {
 
     return (
         <div>
-            {display}
+        {display}
         </div>
     )
 }
-
 
 export default Gallery
